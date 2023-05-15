@@ -4,8 +4,7 @@
 
 // allows us to use C:out tags
 // example <c:out value = "${data}"/>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 // fmt library usually to format date and time
 // resorces here ==
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -14,7 +13,7 @@
 <%@ page import="java.io.*,java.util.*"%>
 
 // to use the form:from tag
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 // on the edit jsp
 <%@ page isErrorPage="true" %>
@@ -31,7 +30,7 @@
 <form:form action="/shows/new" method="post" modelAttribute="newShowPlus">
     <div class="form-group">
         <label>Title</label>
-        <form:input path="title" cla-ss="form-control" />
+        <form:input path="title" class="form-control" />
         <form:errors path="title" class="text-danger" />
     </div>
     <div class="form-group">

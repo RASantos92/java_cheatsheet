@@ -8,7 +8,7 @@ private static UserService userServ;
 	public String loginRegPage(Model model) {
 		model.addAttribute("user", new User());
 		model.addAttribute("loginUser", new LoginUser());
-		return "loginPage.jsp";
+		return "loginReg.jsp";
 	}
 
 	@PostMapping("/register/user")
@@ -25,8 +25,8 @@ private static UserService userServ;
 			return "loginPage.jsp";
 		}
 		User newUser = userServ.create(user);
-		session.setAttribute("user", newUser);
-		return "redirect:/dashboard";
+		session.setAttribute("user_id", newUser.getId());
+		return "redirect:/";
 	}
 
 	@PostMapping("/login/user")

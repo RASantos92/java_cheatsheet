@@ -16,7 +16,7 @@ public class Book {
 
     @Column(updatable = false)
 	private Date createdAt;
-    @Column(updatable = false)
+
 	private Date updatedAt;
 
     // empty constructor
@@ -33,7 +33,6 @@ public class Book {
 		this.numOfPages = numOfPages;
 	}
 
-    public 
 
     @PrePersist // adds the created at date and time to sql on creation 
 	protected void onCreate() {
